@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://github.com/maxk1219/test/blob/master/devcanvas.analyzers.schema.json",
+  "title": "DevCanvas Analyzers Configuration",
+  "description": "Configuration file for DevCanvas Analyzers",
+  "type": "object",
+  "properties": {
+    "settings": {
+      "type": "object",
+      "properties": {
+        "tracerSettings": {
+          "type": "object",
+          "properties": {
+            "typeDefinitions": {
+              "type": "array",
+              "uniqueItems": true,
+              "minItems": 1,
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "typeFQN": {
+                      "type": "string"
+                    },
+                    "methodName": {
+                      "type": "string"
+                    },
+                    "parameterName": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "typeFQN",
+                    "methodName",
+                    "parameterName"
+                  ]
+                }
+              ],
+              "additionalItems": false
+            },
+            "tagFormat": {
+              "type": "string",
+              "enum": ["4digit", "5digit"]
+            }
+          },
+          "required": [
+            "typeDefinitions",
+            "tagFormat"
+          ]
+        }
+      },
+      "required": [
+        "tracerSettings"
+      ]
+    }
+  },
+  "required": [
+    "settings"
+  ]
+}

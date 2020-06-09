@@ -36,15 +36,10 @@
                   ]
                 }
               ],
-            },
-            "tagFormat": {
-              "type": "string",
-              "enum": ["4digit", "5digit"]
             }
           },
           "required": [
-            "typeDefinitions",
-            "tagFormat"
+            "typeDefinitions"
           ]
         }
       },

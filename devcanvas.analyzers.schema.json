@@ -5,9 +5,6 @@
   "description": "Configuration file for DevCanvas Analyzers",
   "type": "object",
   "properties": {
-    "settings": {
-      "type": "object",
-      "properties": {
         "tracerSettings": {
           "type": "object",
           "properties": {
@@ -46,9 +43,4 @@
       "required": [
         "tracerSettings"
       ]
-    }
-  },
-  "required": [
-    "settings"
-  ]
 }

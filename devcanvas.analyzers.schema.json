@@ -34,9 +34,9 @@
                 }
               ],
             },           
-           "tagFormat": {
+           "tagGenerator": {
               "type": "string",
-              "enum": ["4digit", "5digit"]
+              "enum": ["local", "service"]
             }
           },
           "required": [
@@ -49,4 +49,3 @@
         "tracerSettings"
       ]
     }
-}

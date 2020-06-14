@@ -34,14 +34,14 @@
                 }
               ],
             },           
-           "tagGenerator": {
+           "tagMode": {
               "type": "string",
               "enum": ["local", "service"]
             }
           },
           "required": [
             "typeDefinitions",
-            "tagFormat"
+            "tagMode"
           ]
         }
       },

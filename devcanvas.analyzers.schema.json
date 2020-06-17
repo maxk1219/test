@@ -16,12 +16,12 @@
             {
               "type": "object",
               "properties": {
-                "typeFQN": { "type": "string" },
+                "typeFqn": { "type": "string" },
                 "methodName": { "type": "string" },
                 "parameterName": { "type": "string" }
               },
               "required": [
-                "typeFQN",
+                "typeFqn",
                 "methodName",
                 "parameterName"
               ]

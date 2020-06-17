@@ -28,8 +28,8 @@
             }
           ]
         },
-        "tagMode": { "enum": [ "local", "service" ] },
-        "serviceConfig": {
+        "tagMode": { "enum": [ "local", "remote" ] },
+        "remoteConfig": {
           "type": "object",
           "properties": {
             "gitLocation": { "type": "string" },
@@ -48,9 +48,9 @@
       "anyOf": [
         {
           "properties": {
-            "tagMode": { "const": "service" }
+            "tagMode": { "const": "remote" }
           },
-          "required": [ "serviceConfig" ]
+          "required": [ "remoteConfig" ]
         }
       ]
     }

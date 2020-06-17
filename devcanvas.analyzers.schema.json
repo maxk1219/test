@@ -28,10 +28,7 @@
             }
           ]
         },
-        "tagMode": {
-          "type": "string",
-          "enum": [ "local", "service" ]
-        },
+        "tagMode": { "enum": [ "local", "service" ] },
         "serviceConfig": {
           "type": "object",
           "properties": {
@@ -47,6 +44,14 @@
       "required": [
         "typeDefinitions",
         "tagMode"
+      ],
+      "anyOf": [
+        {
+          "properties": {
+            "tagMode": { "const": "service" }
+          },
+          "required": [ "serviceConfig" ]
+        }
       ]
     }
   },

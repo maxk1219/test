@@ -5,47 +5,47 @@
   "description": "Configuration file for DevCanvas Analyzers",
   "type": "object",
   "properties": {
-        "tracerSettings": {
+    "tracerSettings": {
+      "type": "object",
+      "properties": {
+        "typeDefinitions": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "typeFQN": { "type": "string" },
+                "methodName": { "type": "string" },
+                "parameterName": { "type": "string" }
+              },
+              "required": [
+                "typeFQN",
+                "methodName",
+                "parameterName"
+              ]
+            }
+          ]
+        },
+        "tagMode": {
+          "type": "string",
+          "enum": [ "local", "service" ]
+        },
+        "serviceConfig": {
           "type": "object",
           "properties": {
-            "typeDefinitions": {
-              "type": "array",
-              "uniqueItems": true,
-              "minItems": 1,
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "typeFQN": {
-                      "type": "string"
-                    },
-                    "methodName": {
-                      "type": "string"
-                    },
-                    "parameterName": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "typeFQN",
-                    "methodName",
-                    "parameterName"
-                  ]
-                }
-              ],
-            },           
-           "tagMode": {
-              "type": "string",
-              "enum": ["local", "service"]
-            }
-          },
-          "required": [
-            "typeDefinitions",
-            "tagMode"
-          ]
+            "gitLocation": { "type": "string" }
+          }
         }
       },
       "required": [
-        "tracerSettings"
+        "typeDefinitions",
+        "tagMode"
       ]
     }
+  },
+  "required": [
+    "tracerSettings"
+  ]
+}

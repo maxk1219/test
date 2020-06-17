@@ -35,8 +35,13 @@
         "serviceConfig": {
           "type": "object",
           "properties": {
-            "gitLocation": { "type": "string" }
-          }
+            "gitLocation": { "type": "string" },
+            "tagSeed": { "type": "number" }
+          },
+          "required": [
+            "gitLocation",
+            "tagSeed"
+          ]
         }
       },
       "required": [
